@@ -12,7 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')->with([
+        'foo' => 'bar',
+        'tasks' => [
+            'task1',
+            'task2',
+            'task3',
+            'task4',
+            'task5',
+        ]
+    ]);
 });
 
 Route::get('/contact', function () {
