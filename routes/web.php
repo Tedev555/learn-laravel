@@ -11,23 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome')->with([
-        'foo' => 'bar',
-        'tasks' => [
-            'task1',
-            'task2',
-            'task3',
-            'task4',
-            'task5',
-        ]
-    ]);
-});
+Route::get('/', 'PageController@home');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', 'PageController@contact');
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', 'PageController@about');
+
